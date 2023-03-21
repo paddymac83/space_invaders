@@ -62,8 +62,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // add gameloop
     let mut player = Player::new();  // new instance of Player struct
+    let mut instant = Instant::now();
     'gameloop: loop {
         // per frame init
+        let delta = instant.elapsed();
+        instant = Instant::now();   // provides a delta value based on the loop elapsed time
         let mut curr_frame = new_frame();
 
         // Input handlers for the game
@@ -72,6 +75,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                 match key_event.code {
                     KeyCode::Left => player.move_left(),
                     KeyCode::Right => player.move_right(),
+                    KeyCode::Char(' ') | KeyCode::Enter => {
+                        if player.shoot() {
+                            audio.play("pew");
+                        }
+                    }
                     KeyCode::Esc | KeyCode::Char('q') => {
                         audio.play("lose");
                     }
@@ -80,6 +88,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
         // draw and render section
+        player.update(delta);    // pass loop elapsed time into the from_millis(50) and erode it..
+
         player.draw(&mut curr_frame); // draw the player into the frame
         let _ = render_tx.send(curr_frame);  // ignore errors as child thread starts up
         thread::sleep(Duration::from_millis(1)) // add 1ms delay to allow render to catch up
