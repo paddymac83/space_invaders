@@ -1,0 +1,1 @@
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/release/invaders: /mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/src/main.rs

@@ -1,0 +1,12 @@
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/release/deps/libthiserror_impl-8d224d20fea540ab.so: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/ast.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/attr.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/expand.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/fmt.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/generics.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/prop.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/valid.rs
+
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/release/deps/thiserror_impl-8d224d20fea540ab.d: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/ast.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/attr.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/expand.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/fmt.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/generics.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/prop.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/valid.rs
+
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/lib.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/ast.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/attr.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/expand.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/fmt.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/generics.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/prop.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.39/src/valid.rs:

@@ -1,0 +1,13 @@
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/debug/deps/claxon-378dc83018eab50a.rmeta: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/crc.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/error.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/frame.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/input.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/metadata.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/subframe.rs
+
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/debug/deps/libclaxon-378dc83018eab50a.rlib: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/crc.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/error.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/frame.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/input.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/metadata.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/subframe.rs
+
+/mnt/c/Users/mcnab/Documents/Rust/Projects/ultimate_rust_crash_course/exercise/invaders/target/debug/deps/claxon-378dc83018eab50a.d: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/crc.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/error.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/frame.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/input.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/metadata.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/subframe.rs
+
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/lib.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/crc.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/error.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/frame.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/input.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/metadata.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/claxon-0.4.3/src/subframe.rs:
