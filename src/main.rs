@@ -16,6 +16,7 @@ use std::{
 
 use invaders::{
     frame::{self, new_frame, Drawable, Frame},
+    invaders::Invaders,
     player::Player,
     render,
 };
@@ -63,6 +64,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // add gameloop
     let mut player = Player::new();  // new instance of Player struct
     let mut instant = Instant::now();
+    let mut invaders = Invaders::new();
     'gameloop: loop {
         // per frame init
         let delta = instant.elapsed();
@@ -88,9 +90,16 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
         // draw and render section
-        player.update(delta);    // pass loop elapsed time into the from_millis(50) and erode it..
+        player.update(delta);    // pass loop elapsed time into the from_millis(50) and erode it..  
+        if invaders.update(delta) {  // if invaders move then play move sound
+            audio.play("move"); 
+        }
 
-        player.draw(&mut curr_frame); // draw the player into the frame
+        let drawables: Vec<&dyn Drawable> = vec![&player, &invaders];  // anything that implements the Drawable trait
+        for drawable in drawables {
+            drawable.draw(&mut curr_frame);
+        }
+
         let _ = render_tx.send(curr_frame);  // ignore errors as child thread starts up
         thread::sleep(Duration::from_millis(1)) // add 1ms delay to allow render to catch up
     }

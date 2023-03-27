@@ -1,5 +1,10 @@
+use crate::{
+    frame::{Drawable, Frame},
+    {NUM_COLS, NUM_ROWS},
+};
+
 use rusty_time::timer::Timer;
-use crate::{NUM_COLS, NUM_ROWS};
+use std::{cmp::max, time::Duration};
 
 pub struct Invader {
     pub x: usize,
@@ -35,31 +40,31 @@ impl Invaders {
         }
     }
     pub fn update(&mut self, delta: Duration) -> bool {
-        self.move_timer(delta);
+        self.move_timer.update(delta);
         if self.move_timer.ready {
             self.move_timer.reset();
             let mut downwards = false;
             if self.direction == -1 {   // moving left
-                let min_x = self.army.iter().map(|invader| invader.x).min.().unwrap_or(0);   // find the most left invader or ret 0
+                let min_x = self.army.iter().map(|invader| invader.x).min().unwrap_or(0);   // find the most left invader or ret 0
                     if min_x == 0 {   // if all invaders have moved left, move right and move downwards
                         self.direction = 1; // move right
                         downwards = true;
                     }
             } else {
                 let max_x = self.army.iter().map(|invader| invader.x).max().unwrap_or(0);
-                    if max_x = NUM_COLS-1 {
+                    if max_x == NUM_COLS-1 {
                         self.direction = -1;
                         downwards = true;
                 }
             }
             if downwards {
                 let new_duration = max(self.move_timer.duration.as_millis() - 250, 250); // speeds up downward, limit at 250
-                self.move_timer = Timer::duration(new_duration as u64);
-                for invader in invaders.army.iter_mut() {
+                self.move_timer = Timer::from_millis(new_duration as u64);
+                for invader in self.army.iter_mut() {
                     invader.y += 1; // moved each invader down by one
                 }
             } else {
-                for invader in invaders.army.iter_mut() {
+                for invader in self.army.iter_mut() {
                     invader.x = ((invader.x as i32 + self.direction) as usize);  // if not downwards, move all inv by self.dir
                 }
             }
@@ -73,7 +78,12 @@ impl Invaders {
 impl Drawable for Invaders {
     fn draw(&self, frame: &mut Frame) {
         for invader in self.army.iter() {
-            frame[invader.x][invader.y] = 
+            frame[invader.x][invader.y] = if (self.move_timer.time_left.as_secs_f32()  // alternate character depending on which 
+            / self.move_timer.duration.as_secs_f32() > 0.5) {        // half of the move timer duration we are in
+                "x"
+            } else {
+                "+"
+            };
 
         }
     }
