@@ -1,6 +1,7 @@
 use crate::{
     frame::{Drawable, Frame},
     shot::Shot,
+    invaders::Invaders,
     {NUM_COLS, NUM_ROWS},
 };
 use std::time::Duration;
@@ -43,6 +44,18 @@ impl Player {
             shot.update(delta);  // pass elapsed time to update shots
         }
         self.shots.retain(|shot| !shot.dead());  // retain the shot that is not dead
+    }
+    pub fn detect_hits(&mut self, invaders: &mut Invaders) -> bool {
+        let mut hit_something = false;
+        for shot in self.shots.iter_mut() {
+            if !shot.exploding {
+                if invaders.kill_invader_at(shot.x, shot.y) {
+                    hit_something = true;
+                    shot.exploding;
+                }  // if shot location is at invader location
+            }
+        }
+        hit_something
     }
 }
 

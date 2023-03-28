@@ -95,13 +95,28 @@ fn main() -> Result<(), Box<dyn Error>> {
             audio.play("move"); 
         }
 
+        if player.detect_hits(&mut invaders) {
+            audio.play("explode");
+        }
+
         let drawables: Vec<&dyn Drawable> = vec![&player, &invaders];  // anything that implements the Drawable trait
         for drawable in drawables {
             drawable.draw(&mut curr_frame);
         }
 
         let _ = render_tx.send(curr_frame);  // ignore errors as child thread starts up
-        thread::sleep(Duration::from_millis(1)) // add 1ms delay to allow render to catch up
+        thread::sleep(Duration::from_millis(1)); // add 1ms delay to allow render to catch up
+
+        // win/lose
+        if invaders.all_killed() {
+            audio.play("win");
+            break 'gameloop;
+        }
+
+        if invaders.reached_bottom() {
+        audio.play("lose");
+        break 'gameloop;
+        }
     }
   
 
